@@ -5,9 +5,9 @@
 
         String pattern = "\\^.\\d+\\.([a-z]|\\d+)\\-";
         string = string.replaceAll(pattern,"");
-        String pattern1 = "\\d+(\\-)(\\d+)(\\-([a-z]|\\d+))?";
-        String pattern2 = "\\d+(\\_)(\\d+)(\\_([a-z]|\\d+))?";
-        String pattern3 = "\\d+(\\.)(\\d+)(\\.([a-s,u-x]|\\d+))?";
+        String pattern1 = "(v)?\\d+(\\-)(\\d+)(\\-([a-z]|\\d+))?";
+        String pattern2 = "(v)?\\d+(\\_)(\\d+)(\\_([a-z]|\\d+))?";
+        String pattern3 = "(v)?\\d+(\\.)(\\d+)(\\.([a-s,u-x]|\\d+))?";
 
         String newversion1 = newversion.replace('.','-');
         String newversion2 = newversion.replace('.','_');
