@@ -1,5 +1,8 @@
  public String sub_string(String string, String newversion)
     {
+        
+
+
         String pattern = "\\^.\\d+\\.([a-z]|\\d+)\\-";
         string = string.replaceAll(pattern,"");
         String pattern1 = "\\d+(\\-)(\\d+)(\\-([a-z]|\\d+))?";
