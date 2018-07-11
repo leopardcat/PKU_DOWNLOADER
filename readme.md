@@ -3,8 +3,8 @@
     生产力更高。<br/>
 2.&nbsp;is_cve_contains_android.py 检测 start ~ end 的 cve条目是否为andriod.<br/>
     &nbsp;&nbsp;&nbsp;&nbsp;1)输入 开始条目 （较大的） 如 cve-2014-5600 输入 5600<br/>
-    &nbsp;&nbsp;&nbsp;2)输入 结束条目 （较小的） 如 cve-2014-5500 输入 5500<br/>
-    会显示出 从cve-2014-5600 到 cve-2014-5500 描述中有andriod的条目<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;2)输入 结束条目 （较小的） 如 cve-2014-5500 输入 5500<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;会显示出 从cve-2014-5600 到 cve-2014-5500 描述中有andriod的条目<br/>
 3.&nbsp;基本同 2 只是显示的为不含andriod的条目<br/>
 注:&nbsp;python脚本不适用时自己可简单修改。<br/>
 
