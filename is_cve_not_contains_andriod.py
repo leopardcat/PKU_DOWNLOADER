@@ -12,9 +12,9 @@ while str1-str2 >=0:
 	result=str(tree.xpath('//td[@colspan="2"]/text()'))
 	str1=str1-1
 	if "for Android" in result or "for\\nAndroid" in result:
-		#continue		
-		print'number'+str(str1+1)+' contains android'
-	else:
 		continue		
-		#print'number'+str(str1+1)+' not contains android'
+		#print'number'+str(str1+1)+' contains android'
+	else:
+		#continue		
+		print'number'+str(str1+1)+' not contains android'
 print "----END-----"
