@@ -1,3 +1,16 @@
+说明
+1.Indexbasement_Maintenance.jar 建库工具
+    生产力更高。
+2.is_cve_contains_android.py 检测 start ~ end 的 cve条目是否为andriod.
+    1)输入 开始条目 （较大的） 如 cve-2014-5600 输入 5600
+    2)输入 结束条目 （较小的） 如 cve-2014-5500 输入 5500
+    会显示出 从cve-2014-5600 到 cve-2014-5500 描述中有andriod的条目
+3.基本同 2 只是显示的为不含andriod的条目
+注:python脚本不适用时自己可简单修改。
+
+
+
+//可忽视以下
 //测试里的
  public String sub_string(String string, String newversion)
     {
