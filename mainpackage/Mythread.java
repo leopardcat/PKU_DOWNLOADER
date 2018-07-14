@@ -127,20 +127,18 @@ public class Mythread implements Runnable {
 					}
 				}
 				textArea.setText(sssb);
-				if(sampurl.length()>1) {
-					String newurl = FuncClass.sub_string(sampurl, version);
-					if (newurl.contains("zip")) {
-						fileformaltext.setText(".zip");
-					} else if (newurl.contains("tar.gz") || newurl.contains("tgz")) {
-						fileformaltext.setText(".tar.gz");
-					} else if (newurl.contains("tar.xz")) {
-						fileformaltext.setText(".tar.xz");
-					} else if (newurl.contains("tar.bz2")) {
-						fileformaltext.setText(".tar.bz2");
-					}
-					downloadtext.setText(newurl);
-					downloadtext.setCaretPosition(downloadtext.getText().length());
+				String newurl=FuncClass.sub_string(sampurl,version);
+				if(newurl.contains("zip")){
+					fileformaltext.setText(".zip");
+				}else if(newurl.contains("tar.gz")||newurl.contains("tgz")){
+					fileformaltext.setText(".tar.gz");
+				}else if(newurl.contains("tar.xz")){
+					fileformaltext.setText(".tar.xz");
+				}else if(newurl.contains("tar.bz2")){
+					fileformaltext.setText(".tar.bz2");
 				}
+				downloadtext.setText(newurl);
+				downloadtext.setCaretPosition(downloadtext.getText().length());
 			}
 			s.close();
 		} catch (IOException e) {

@@ -100,20 +100,41 @@ public class MainForm extends JFrame implements DocumentListener{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		JCheckBox jCheckBox1 = new JCheckBox("°æ±¾ºÅ+v");
-		jCheckBox1.setBounds(680,570,100,50);
-		jCheckBox1.addChangeListener(new ChangeListener() {
-			@Override
-			public void stateChanged(ChangeEvent e) {
+		jCheckBox1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
 				if(jCheckBox1.isSelected())
 				{
 					FuncClass.setV_plusTrue();
+					String proname=pronametext.getText().toString(),version=versiontext.getText().toString();
+					String write="6"+"@"+proname+"\n"+"itsoverhaha";
+					EventQueue.invokeLater(new Mythread(6,write,sampletext,textArea,downloadtext,version,fileformaltext));
 				}
 				else
 				{
 					FuncClass.setV_plusFalse();
+					String proname=pronametext.getText().toString(),version=versiontext.getText().toString();
+					String write="6"+"@"+proname+"\n"+"itsoverhaha";
+					EventQueue.invokeLater(new Mythread(6,write,sampletext,textArea,downloadtext,version,fileformaltext));
 				}
 			}
 		});
+		jCheckBox1.setBounds(680,582,100,24);
+		
+//		jCheckBox1.addChangeListener(new ChangeListener() {
+//			@Override
+//			public void stateChanged(ChangeEvent e) {
+//				if(jCheckBox1.isSelected())
+//				{
+//					FuncClass.setV_plusTrue();
+//					FuncClass.autofill(unex, pronametext, vendortext, versiontext,sampletext,textArea,downloadtext,fileformaltext);
+//				}
+//				else
+//				{
+//					FuncClass.setV_plusFalse();
+//					FuncClass.autofill(unex, pronametext, vendortext, versiontext,sampletext,textArea,downloadtext,fileformaltext);
+//				}
+//			}
+//		});
 		contentPane.add(jCheckBox1);
 		java.awt.Toolkit.getDefaultToolkit().addAWTEventListener(new AWTEventListener() {
 			@Override
